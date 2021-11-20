@@ -202,15 +202,6 @@ Metrics/LineLength:
   Exclude:
     - 'db/**/*'
 
-Metrics/BlockLength:
-  Exclude:
-    - "**/*_spec.rb"
-    - "lib/tasks/**/*"
-  ExcludedMethods:
-    - 'define'
-    - 'factory'
-    - 'create_mapping'
-
 Lint/AssignmentInCondition:
   Description: Don't use assignment in conditions.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#safe-assignment-in-condition
