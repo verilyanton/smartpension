@@ -8,7 +8,7 @@ describe DataProviders::JsonFile do
 
   describe '#retrieve' do
     context 'when provided with file path' do
-      it 'retrieves the file and parses json' do
+      it 'retrieves the file and returns parsed json' do
         allow(File).to receive(:read).and_return(json_data)
         result = DataProviders::JsonFile.new.retrieve(file_path)
 
