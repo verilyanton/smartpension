@@ -10,8 +10,8 @@ describe IpDomain do
         ip = IpDomain.new(valid_ip_address)
 
         expect(ip.address).to eq valid_ip_address
+        expect(ip.attrs).to eq({ 'address' => valid_ip_address })
       end
-
     end
   end
 

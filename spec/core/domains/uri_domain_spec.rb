@@ -11,8 +11,8 @@ describe UriDomain do
         uri = UriDomain.new(valid_path)
 
         expect(uri.path).to eq valid_path
+        expect(uri.attrs).to eq({ 'path' => valid_path })
       end
-
     end
   end
 

@@ -8,7 +8,7 @@ class UriDomain
   attr_reader :path
 
   def initialize(path)
-    @path = path
+    @path = path.strip
   end
 
   def valid?
@@ -18,5 +18,9 @@ class UriDomain
 
   rescue URI::InvalidURIError
     false
+  end
+
+  def attrs
+    { 'path' => @path }
   end
 end
