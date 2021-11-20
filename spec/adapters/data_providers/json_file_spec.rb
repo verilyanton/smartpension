@@ -1,4 +1,3 @@
-require 'json'
 require './app/adapters/data_providers/json_file'
 
 describe DataProviders::JsonFile do
