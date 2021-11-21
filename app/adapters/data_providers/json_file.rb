@@ -1,5 +1,5 @@
 require 'json'
-require './app/adapters/data_providers/base'
+require_relative 'base'
 
 module DataProviders
   class JsonFile < Base
