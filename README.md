@@ -75,7 +75,10 @@ and code comments are required, I will surely do them.
 
 ## Other Notes
 
-Having the liberty to choose the implementation, I decided to use call my domain
+Due to the lack of time, I wasn't been able to provide the full test coverage.
+I hope the amount of tests I did provide proves that I _can_ write them.
+
+Having the liberty to choose the implementation, I decided to call my domain
 'URI' instead of 'Page'. This makes no difference at all on a tiny project like this,
 but technically, a page can have multiple URIs, and in theory, at a certain moment we 
 might want to create Page domain and have one-to-many relation to URI objects.
