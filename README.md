@@ -15,7 +15,11 @@ At the risk of being dismissed for over-engineering the solution, I chose the le
 1. Please, use `ruby 2.7.2` to run this code. My guess is that it should work
 just as well with `v2.7.0` or even `v2.5.x` but it just wasn't tested
 with these versions.
-2. Create rspec binstub  
+2. Make sure you have Bundler installed, or install it by running  
+`gem install bundler`
+3. Install project dependencies  
+`bundle install`
+4. Create rspec binstub  
 `bundle binstubs rspec-core`
 
 
