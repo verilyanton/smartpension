@@ -72,7 +72,7 @@ adopted by the company, I will readily go with it.
 
 My opinion is that in most cases good code doesn't have to be documented. 
 A notable exception in Ruby are types (classes) of function arguments and returns,
-which may significantly increase the code readability.  
+where comments may significantly increase the code readability.  
 However, just as with the code style, if the company policy is that rich doc blocks
 and code comments are required, I will surely do them.
 
@@ -80,7 +80,7 @@ and code comments are required, I will surely do them.
 ## Other Notes
 
 Due to the lack of time, I wasn't been able to provide the full test coverage.
-I hope the amount of tests I did provide proves that I _can_ write them.
+I hope the amount of tests I _did_ provide proves that I can write them.
 
 Having the liberty to choose the implementation, I decided to call my domain
 'URI' instead of 'Page'. This makes no difference at all on a tiny project like this,
