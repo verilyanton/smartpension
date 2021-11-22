@@ -14,11 +14,7 @@ module UseCases
     end
 
     def execute
-      views_counts, unique_views_counts = get_views
-      [
-        views_counts.sort_by { |_, count| count }.reverse,
-        unique_views_counts.sort_by { |_, count| count }.reverse,
-      ]
+      sort_views(get_views)
     end
 
     def get_views
@@ -84,6 +80,14 @@ module UseCases
       end
 
       [views_counts, unique_views_counts]
+    end
+
+    def sort_views(views_count)
+      views_counts, unique_views_counts = views_count
+      [
+        views_counts.sort_by { |_, count| count }.reverse,
+        unique_views_counts.sort_by { |_, count| count }.reverse,
+      ]
     end
   end
 end

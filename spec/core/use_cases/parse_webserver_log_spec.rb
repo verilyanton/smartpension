@@ -10,7 +10,24 @@ describe UseCases::ParseWebserverLog do
   end
 
   describe '#count_views' do
-    context 'when count_views is called with invalid data' do
+    context 'when called with valid data' do
+      let(:log_data) do
+        [
+          '/home 1.1.1.1',
+          '/home 1.1.1.1',
+          '/home 1.1.1.1',
+          '/contact 2.2.2.2',
+          '/contact 3.3.3.3',
+        ]
+      end
+
+      it 'returns counted views' do
+        expect(subject.count_views(log_data)).
+          to eq([{ '/home' => 3, '/contact' => 2 }, { '/home' => 1, '/contact' => 2 }])
+      end
+    end
+
+    context 'when called with invalid data' do
       let(:log_data) do
         [
           '/help_page    /1 235.1.1.1',
@@ -20,8 +37,21 @@ describe UseCases::ParseWebserverLog do
         ]
       end
 
-      it 'skips these rows' do
+      it 'skips rows with invalid data' do
         expect(subject.count_views(log_data)).to eq [{ '/home' => 1 }, { '/home' => 1 }]
+      end
+    end
+  end
+
+  describe '#sort_views' do
+    context 'when called with views_count array' do
+      let(:views_count) do
+        [{ '/home' => 3, '/contact' => 2 }, { '/home' => 1, '/contact' => 2 }]
+      end
+
+      it 'sorts each count descending' do
+        expect(subject.sort_views(views_count)).
+          to eq([[['/home', 3], ['/contact', 2]], [['/contact', 2], ['/home', 1]]])
       end
     end
   end
