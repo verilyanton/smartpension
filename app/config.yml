@@ -1,0 +1,3 @@
+cache:
+  data_provider: json_file
+  file_dir: 'data/cache'
