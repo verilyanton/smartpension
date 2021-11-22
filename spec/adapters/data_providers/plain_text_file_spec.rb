@@ -3,8 +3,8 @@ require './app/adapters/data_providers/plain_text_file'
 describe DataProviders::PlainTextFile do
 
   file_path = 'spec/stubs/file.json'
-  raw_data = "John\nMary\nKate\n"
-  lines = %w[John Mary Kate]
+  raw_data = "/home 126.318.035.038\n/about/2 543.910.244.929\n"
+  lines = ['/home 126.318.035.038', '/about/2 543.910.244.929']
 
   describe '#retrieve' do
     context 'when provided with file path' do

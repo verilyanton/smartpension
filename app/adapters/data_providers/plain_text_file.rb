@@ -3,7 +3,7 @@ require_relative 'base'
 module DataProviders
   class PlainTextFile < Base
     def retrieve(file_path)
-      File.read(file_path).split
+      File.read(file_path).split("\n")
     end
 
     def save(file_path, data)
