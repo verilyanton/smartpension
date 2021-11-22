@@ -7,7 +7,7 @@ or email: matusenco@protonmail.com
 
 I had a hard time thinking whether I should create a very simple Ruby script because 
 it is a test assigment, or I should write the code as if it would be used in production.
-At the risk of being dismissed for over-engineering the solution, I chose the letter.
+At the risk of being dismissed for over-engineering the solution, I chose the latter.
 
 
 ## Project Setup
