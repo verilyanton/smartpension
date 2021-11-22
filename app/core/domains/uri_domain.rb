@@ -6,7 +6,7 @@ class UriDomain
   attr_reader :path
 
   def initialize(path)
-    @path = path.strip
+    @path = path.strip if path.is_a? String
   end
 
   def valid?

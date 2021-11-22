@@ -4,7 +4,7 @@ class IpDomain
   attr_reader :address
 
   def initialize(address)
-    @address = address.strip
+    @address = address.strip if address.is_a? String
   end
 
   def valid?
